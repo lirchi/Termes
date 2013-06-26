@@ -1,6 +1,6 @@
 Termes Simulator
 
-You should basically look at BlocksWorld.java (where main() resides) to get a sense of whats going on. This version is modular in the sense that we can plugin different robots (of type AbstractRobot, like TermesRobot for example) and different "AI engines" as independent threads (like RandomTermesBotEngine for example). An AI agent is in charge of coming up with a plan for a robot. A plan is a set of actions and (global) timesteps. Once all robots' AI engines complited (that is, each robot knows his plan) the GUI (BlocksWorldGUI) simulate it for us graphically. Keep in mind that I tried to minimize usage of polymorphism for added performance, so let me know if you have better implementation ideas!
+You should basically look at BlocksWorld.java (where main() resides) to get a sense of whats going on. This version is modular in the sense that we can plugin different robots (of type AbstractRobot, like TermesRobot for example) and different "AI engines" as independent threads (like RandomTermesBotEngine for example). An AI agent is in charge of coming up with a plan for a robot. A plan is a set of actions and (global) timesteps. Once all robots' AI engines are done (that is, each robot has a full plan) the GUI (BlocksWorldGUI) simulate it for us graphically. Keep in mind that I tried to minimize usage of polymorphism for added performance, so let me know if you have better implementation ideas!
 
 Compile: javac *.java
 Run:     java BlocksWorld MAPS/init1.txt MAPS/goal1.txt
